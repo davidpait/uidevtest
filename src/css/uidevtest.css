@@ -5,6 +5,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 *{box-sizing: border-box}
 body {font-family: "arial"}
 p {padding-bottom: 1em}
+.dpMobile{display:none}
 
 /* LIST VIEW */
 .dpListView{width:960px;margin:0 auto}
@@ -16,7 +17,7 @@ p {padding-bottom: 1em}
 	-moz-box-shadow: 3px 3px 3px #808080;
 	-o-box-shadow: 3px 3px 3px #808080;
 	box-shadow: 3px 3px 3px #808080;
-	float: left
+	float:left
 }
 .dpStoryLink{
 	color:#036dbe;
