@@ -73,3 +73,16 @@ p {padding-bottom: 1em}
 	-moz-column-width:260px;
 	column-width:260px
 }
+
+/*MEDIA QUERIES */
+@media all and (max-width: 480px) {
+	.dpMobile{display:inline-block}
+	.dpDesktop{display:none}
+	.dpInteriorStorySocial{float:left;width:100%;margin-bottom:12px}
+	.dpStoryView {margin-top:5px}
+	.dpInteriorPhotoContain{margin-bottom: 20px}
+	.dpInteriorPhotoCredit{color: #898989; background: transparent;bottom:-22px;}
+	.dpInteriorStoryMain{float:left;width:auto}
+	.dpInteriorStoryLeftCol{width:auto}
+	.dpInteriorStorySocialIcons{filter:none;-webkit-filter:grayscale(0%)}
+}
