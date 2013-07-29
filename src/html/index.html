@@ -9,6 +9,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-sanitize.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="../css/uidevtest.css">
+		<script type="text/javascript" src="../js/modernizr.custom.65375.js"></script>
 	</head>
 	<body>
 		<div ng-controller="dpController">
@@ -55,7 +56,7 @@
 				        	<img class="dpInteriorPhoto" ng-src="{{ current.lead_photo_image_url }}" alt="">
 				        	<span class="dpInteriorPhotoCredit">{{ current.lead_photo_credit }}</span>	
 				        </div>
-				        	<span class="dpInteriorPhotoCaption">{{ current.lead_photo_caption }}</span>        		
+				        <span class="dpInteriorPhotoCaption">{{ current.lead_photo_caption }}</span>        		
 		        	</div>
 		        	<div class="dpInteriorStoryMain">
 		        		<div class="dpInteriorStoryAutor" ng-repeat="author in current.author">By <a href="#" class="dpInteriorStoryLink">{{author}}</a></div>
