@@ -27,7 +27,40 @@
 					</ul>
 		        </div>
 		        <div ng-switch-when="story" class="dpStoryView">
-		        	
+		        	<div class="dpInteriorStoryCategory"><a class="dpInteriorStoryLink" href="index.html">HOME</a>
+		        		<span class="dpInteriorIndividualCategory" ng-repeat="category in current.categories_name">{{category | uppercase }}</span>
+		        	</div>	
+		        	<div class="dpDesktop">
+		        		<div class="dpInteriorStoryTitle">{{ current.title }}</div>
+			        	<div class="dpInteriorStoryTimestamps">
+			        		<span class="dpInteriorStoryTimeUpdate">Updated: {{ current.updated | date:'h:mm a EEEE, MMM. d, yyyy' }} </span>|
+			        		<span class="dpInteriorStoryTimePublish">Posted: {{ current.pub_date | date:'h:mm a EEEE, MMM. d, yyyy' }} </span>
+			        	</div>
+		        	</div>
+		        	<div class="dpMobile">
+			        	<div class="dpInteriorStoryTimestamps">
+			        		<span class="dpInteriorStoryTimeUpdate">Updated: {{ current.updated | date:'h:mm a EEEE, MMM. d, yyyy' }} </span>|
+			        		<span class="dpInteriorStoryTimePublish">Posted: {{ current.pub_date | date:'h:mm a EEEE, MMM. d, yyyy' }} </span>
+			        	</div>
+			        	<div class="dpInteriorStoryTitle">{{ current.title }}</div>
+		        	</div>
+		        	<div class="dpInteriorStorySocial">
+	        			<a href="#" class="dpCommentLink"><i class="dpInteriorStorySocialIcons dpCommentIcon"></i><span class="dpCommentText">COMMENT</span></a>
+						<a href="#" class="dpShareLink"><i class="dpInteriorStorySocialIcons dpShareIcon"></i><span class="dpShareText">SHARE</span></a>
+						<a href="#" class="dpFavoriteLink"><i class="dpInteriorStorySocialIcons dpFavoriteIcon"></i><span class="dpFavoriteText">FAVORITE</span></a>
+						<a href="#" class="dpVoteLink"><i class="dpInteriorStorySocialIcons dpVoteIcon"></i><span class="dpVoteText">VOTE</span></a>
+		        	</div>
+		        	<div class="dpInteriorStoryLeftCol">
+		        		<div class="dpInteriorPhotoContain">
+				        	<img class="dpInteriorPhoto" ng-src="{{ current.lead_photo_image_url }}" alt="">
+				        	<span class="dpInteriorPhotoCredit">{{ current.lead_photo_credit }}</span>	
+				        </div>
+				        	<span class="dpInteriorPhotoCaption">{{ current.lead_photo_caption }}</span>        		
+		        	</div>
+		        	<div class="dpInteriorStoryMain">
+		        		<div class="dpInteriorStoryAutor" ng-repeat="author in current.author">By <a href="#" class="dpInteriorStoryLink">{{author}}</a></div>
+		        		<div class="dpInteriorStoryBody" ng-bind-html='current.story'></div>
+		        	</div>
 		        </div>
 		    </div>
 		</div>
