@@ -14,8 +14,20 @@
 		<div ng-controller="dpController">
 			<div ng-switch on="dpView" >
 		        <div ng-switch-when="list" class="dpListView">
+		        	<ul class="dpStoryList">
+						<li class="dpStory" ng-repeat="story in stories">
+							<a href="?story=sto0{{$index + 1}}"><img ng-src="{{story.lead_photo_image_thumb}}" /></a>
+							<div class="dpStoryInfo">
+								<h2><a href="?story=sto0{{$index + 1}}" class="dpStoryLink">{{story.title}}</a></h2>
+								<div class="dpStoryCategory"><span class="dpIndividualCategory" ng-repeat="category in story.categories_name">{{category}}</span></div>	
+								<div class="dpStoryTimePublish">Posted: {{ story.pub_date | date:'h:mm a EEEE, MMM. d, yyyy' }}</div>
+								<div class="dpStoryTimeUpdate">Updated: {{ story.updated | date:'h:mm a EEEE, MMM. d, yyyy' }}</div>
+							</div>
+						</li>
+					</ul>
 		        </div>
 		        <div ng-switch-when="story" class="dpStoryView">
+		        	
 		        </div>
 		    </div>
 		</div>
